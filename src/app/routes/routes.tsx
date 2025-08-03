@@ -1,10 +1,12 @@
 import { CategoryPage } from '@/pages';
 import { createBrowserRouter } from 'react-router';
 
+import { Layout } from '@app/layout/Layout';
+
 export const router = createBrowserRouter([
     {
         path: '/',
-        // Component: () => <div>Hllo</div>,
+        Component: Layout,
         children: [
             { index: true, element: <a>Main</a> },
             { path: 'community', element: <a>Community</a> },
