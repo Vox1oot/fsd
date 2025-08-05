@@ -1,10 +1,9 @@
 :root {
-    --color-medium-content: #787a7c;
-    --color-dark-content: #373737;
-    --color-light-content: #dddfe1;
-
-    --color-blue-accent: #1f74e7;
-
-    --color-main: #ffffff;
-    --color-extended: #f6f8fc;
+    --color-white: #fafafa;
+    --color-grey: #afb2bf;
+    --color-grey-stroke: #4d5064;
+    --color-grey-dark: #1e1f29;
+    --color-violet: #6c38cc;
+    --color-violet-hover: #452481;
+    --color-background: #16171d;
 }

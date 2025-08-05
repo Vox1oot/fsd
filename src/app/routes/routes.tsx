@@ -1,5 +1,15 @@
-import { CategoryPage } from '@/pages';
-import { createBrowserRouter } from 'react-router';
+import {
+    CommunityPage,
+    CoursePage,
+    CoursesPage,
+    HelpPage,
+    HomePage,
+    PremiumPage,
+    ProfilePage,
+    ReferralPage,
+    SkillsPage,
+} from '@/pages';
+import { Navigate, createBrowserRouter } from 'react-router';
 
 import { Layout } from '@app/layout/Layout';
 
@@ -8,18 +18,24 @@ export const router = createBrowserRouter([
         path: '/',
         Component: Layout,
         children: [
-            { index: true, element: <a>Main</a> },
-            { path: 'community', element: <a>Community</a> },
-            { path: ':category', Component: CategoryPage },
+            { index: true, Component: HomePage },
             {
-                path: 'article',
-                children: [{ path: ':alias', element: <a>Article</a> }],
+                path: 'courses',
+                children: [
+                    { index: true, Component: CoursesPage },
+                    { path: ':alias', Component: CoursePage },
+                ],
             },
+            { path: 'skills', Component: SkillsPage },
+            { path: 'premium', Component: PremiumPage },
+            { path: 'community', Component: CommunityPage },
+            { path: 'referral', Component: ReferralPage },
+            { path: 'help', Component: HelpPage },
             {
                 path: 'profile',
                 children: [
-                    { index: true, element: <a>Profile</a> },
-                    { path: 'edit', element: <a>EditProfile</a> },
+                    { index: true, element: <Navigate to="my" replace /> },
+                    { path: 'my', Component: ProfilePage },
                 ],
             },
         ],
