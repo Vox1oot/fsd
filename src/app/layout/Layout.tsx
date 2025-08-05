@@ -1,11 +1,12 @@
 import { Outlet } from 'react-router';
 
+import styles from './Layout.module.css';
+
 export function Layout() {
     return (
-        <div>
-            <div>Шапка</div>
+        <div className={styles.container}>
+            <div>Меню</div>
             <Outlet />
-            <div>Подвал</div>
         </div>
     );
 }

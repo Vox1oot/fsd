@@ -1,1 +1,9 @@
-export { CategoryPage } from './category';
+export { HomePage } from './home';
+export { SkillsPage } from './skills';
+export { PremiumPage } from './premium';
+export { CommunityPage } from './community';
+export { CoursePage } from './course';
+export { CoursesPage } from './courses';
+export { HelpPage } from './help';
+export { ProfilePage } from './profile';
+export { ReferralPage } from './referral';
