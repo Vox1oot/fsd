@@ -9,33 +9,37 @@ import {
     ReferralPage,
     SkillsPage,
 } from '@/pages';
+import { ROUTES } from '@/shared';
 import { Navigate, createBrowserRouter } from 'react-router';
 
 import { Layout } from '@app/layout/Layout';
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: ROUTES.HOME,
         Component: Layout,
         children: [
             { index: true, Component: HomePage },
             {
-                path: 'courses',
+                path: ROUTES.COURSES,
                 children: [
                     { index: true, Component: CoursesPage },
-                    { path: ':alias', Component: CoursePage },
+                    { path: ROUTES.COURSE_ALIAS, Component: CoursePage },
                 ],
             },
-            { path: 'skills', Component: SkillsPage },
-            { path: 'premium', Component: PremiumPage },
-            { path: 'community', Component: CommunityPage },
-            { path: 'referral', Component: ReferralPage },
-            { path: 'help', Component: HelpPage },
+            { path: ROUTES.SKILLS, Component: SkillsPage },
+            { path: ROUTES.PREMIUM, Component: PremiumPage },
+            { path: ROUTES.COMMUNITY, Component: CommunityPage },
+            { path: ROUTES.REFERRAL, Component: ReferralPage },
+            { path: ROUTES.HELP, Component: HelpPage },
             {
-                path: 'profile',
+                path: ROUTES.PROFILE,
                 children: [
-                    { index: true, element: <Navigate to="my" replace /> },
-                    { path: 'my', Component: ProfilePage },
+                    {
+                        index: true,
+                        element: <Navigate to={ROUTES.PROFILE_MY} replace />,
+                    },
+                    { path: ROUTES.PROFILE_MY, Component: ProfilePage },
                 ],
             },
         ],
