@@ -9,3 +9,6 @@ start:
 
 lint:
 	bun run lint
+
+fsd:
+	bun run fsd

@@ -8,3 +8,8 @@
 - Partner (Company)
 - Review
 - Correction
+
+# ⚒️ Инструменты
+
+- steiger
+- @feature-sliced/steiger-plugin
