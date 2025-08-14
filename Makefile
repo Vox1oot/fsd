@@ -12,3 +12,6 @@ lint:
 
 fsd:
 	bun run fsd
+
+fsd-fix:
+	bun run fsd:fix
