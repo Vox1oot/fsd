@@ -10,6 +10,9 @@ start:
 lint:
 	bun run lint
 
+lint-fix:
+	bun run lint -- --fix
+
 fsd:
 	bun run fsd
 

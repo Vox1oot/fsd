@@ -2,12 +2,10 @@
 
 # Slices
 
-- User
-- Category
-- Rating
-- Partner (Company)
-- Review
-- Correction
+- User [Avatar, Statistic, Activity, Bonus, Skill, Courses]
+- Course [Card]
+- AI [Message]
+- Updates
 
 # ⚒️ Инструменты
 

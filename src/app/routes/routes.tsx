@@ -1,3 +1,5 @@
+import { Navigate, createBrowserRouter } from 'react-router';
+
 import {
     CommunityPage,
     CoursePage,
@@ -9,9 +11,7 @@ import {
     ReferralPage,
     SkillsPage,
 } from '@/pages';
-import { ROUTES } from '@/shared';
-import { Navigate, createBrowserRouter } from 'react-router';
-
+import { ROUTES } from '@/shared/routes';
 import { Layout } from '@app/layout/Layout';
 
 export const router = createBrowserRouter([
